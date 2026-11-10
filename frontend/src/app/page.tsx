@@ -1,13 +1,5 @@
-import Page from "@/app/homepage/page";
-import {JSX} from "react";
+import { redirect } from "next/navigation";
 
-export default function Home(): JSX.Element {
-  return (
-    <div
-      className="min-h-screen bg-center bg-cover"
-      style={{ backgroundImage: "url('/homepage/homepage_sphere.jpg')" }}
-    >
-      <Page />
-    </div>
-  );
+export default function Home(): never {
+  redirect("/dashboard");
 }
